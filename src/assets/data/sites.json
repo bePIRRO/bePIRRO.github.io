@@ -1,0 +1,57 @@
+{
+  "sites": {
+    "own": [
+      {
+        "id": 1,
+        "title": "CodNewz",
+        "description": "It's a news site for Call of Duty games. Made with Laravel 9",
+        "url": "https://codnewz.com/en",
+        "img": "codnewz.png"
+      }
+    ]
+  },
+  "boolean": [
+    {
+      "id": 2,
+      "title": "Boolzapp",
+      "description": "It's a copy of WhatsApp made with VueJs cdn",
+      "url": "https://bepirro.github.io/vue-boolzapp/",
+      "img": "boolzapp.png"
+    },
+    {
+      "id": 3,
+      "title": "Discord",
+      "description": "It's a copy of Discord homepage",
+      "url": "https://bepirro.github.io/htmlcss-discord/",
+      "img": "discord.png"
+    },
+    {
+      "id": 4,
+      "title": "Dropbox",
+      "description": "It's a copy of Dropbox homepage",
+      "url": "https://bepirro.github.io/htmlcss-dropbox/",
+      "img": "dropbox.png"
+    },
+    {
+      "id": 5,
+      "title": "Playstation",
+      "description": "It's a copy of Dropbox homepage",
+      "url": "https://bepirro.github.io/vue-boolzapp/",
+      "img": "playstation.png"
+    },
+    {
+      "id": 6,
+      "title": "Spotify",
+      "description": "It's a copy of Spotify interface",
+      "url": "https://bepirro.github.io/html-css-spotifyweb/",
+      "img": "spotify.png"
+    },
+    {
+      "id": 7,
+      "title": "Start-Bootstrap",
+      "description": "It's one of my first projects. First time with bootstrap css library",
+      "url": "https://bepirro.github.io/html-css-bootstrap-freelancer/",
+      "img": "start_bootstrap.png"
+    }
+  ]
+}
