@@ -1,5 +1,22 @@
 <nav class="nav main-nav">
-  <ul>
-    <li>gg</li>
+  <div class="align-self-center">
+    <h3 class="ms-5 mb-0">MANUEL PIRRONE's Portfolio</h3>
+  </div>
+  <ul class="ms-4 main-ul">
+    <li class="nav-item dropdown" *ngFor="let link of links.sites">
+      <button
+        class="btn dropdown-toggle"
+        data-bs-toggle="dropdown"
+        role="button"
+        aria-expanded="false"
+      >
+        {{ link.name }}
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item" *ngFor="let l of link.links">
+          <a class="nav-link">{{ l.title }}</a>
+        </li>
+      </ul>
+    </li>
   </ul>
 </nav>

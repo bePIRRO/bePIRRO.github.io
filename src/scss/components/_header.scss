@@ -2,10 +2,23 @@
   background-color: $black;
   color: $white-smoke;
   height: 50px;
+  .main-ul {
+    height: 100%;
+  }
   ul {
+    margin: 0;
+    align-self: center;
     li {
+      margin: 0;
       list-style-type: none;
       display: inline-block;
+      height: 100%;
+      button {
+        height: 100%;
+        color: $white-smoke;
+        border-radius: 0;
+        border-color: $jet;
+      }
     }
   }
 }

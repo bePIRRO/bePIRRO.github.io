@@ -7,6 +7,7 @@ import { HeaderComponent } from './core/header/header.component'
 import { ListComponent } from './pages/list/list.component'
 import { DetailComponent } from './pages/detail/detail.component'
 import { CardComponent } from './pages/list/card/card.component'
+import { RouterModule } from '@angular/router'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { CardComponent } from './pages/list/card/card.component'
     DetailComponent,
     CardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, RouterModule],
   providers: [],
   bootstrap: [AppComponent],
 })
