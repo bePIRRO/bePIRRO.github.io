@@ -1,7 +1,17 @@
-<div class="col-12 col-sm-6 col-lg-4">
-  <div class="card">
-    <div class="card-header"></div>
-    <div class="card-body"></div>
-    <div class="card-footer"></div>
+<div class="card text-white bg-secondary mb-3">
+  <div class="card-header">
+    {{ site?.title }}
+  </div>
+  <div class="card-body p-0">
+    <img
+      [src]="'./assets/imgs/' + site?.img"
+      [alt]="site.title"
+      class="img-fluid"
+    />
+  </div>
+  <div class="card-footer">
+    <p class="">
+      {{ site?.description }}
+    </p>
   </div>
 </div>

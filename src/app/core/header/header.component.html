@@ -14,7 +14,9 @@
       </button>
       <ul class="dropdown-menu">
         <li class="dropdown-item" *ngFor="let l of link.links">
-          <a class="nav-link">{{ l.title }}</a>
+          <a [routerLink]="'/detail/' + l.title" class="nav-link">{{
+            l.title
+          }}</a>
         </li>
       </ul>
     </li>
