@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import sites from '../../../assets/data/sites.json'
+import { AppService } from 'src/app/app.service'
 
 @Component({
   selector: 'app-header',
@@ -7,5 +7,9 @@ import sites from '../../../assets/data/sites.json'
   styleUrls: [],
 })
 export class HeaderComponent {
-  links = sites
+  links: any[] = []
+
+  constructor(private readonly appService: AppService) {
+    this.links = this.appService.sites
+  }
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import sites from '../../../assets/data/sites.json'
+import { AppService } from 'src/app/app.service'
 
 @Component({
   selector: 'app-list',
@@ -7,17 +7,8 @@ import sites from '../../../assets/data/sites.json'
   styleUrls: [],
 })
 export class ListComponent {
-  constructor() {
-    this.getSitesList()
-  }
-
   sitesList: any[] = []
-
-  getSitesList(): void {
-    sites.sites.forEach((s) => {
-      s.links.forEach((l) => {
-        this.sitesList.push(l)
-      })
-    })
+  constructor(private readonly appService: AppService) {
+    this.sitesList = this.appService.sitesList
   }
 }
