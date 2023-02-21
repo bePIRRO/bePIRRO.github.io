@@ -8,6 +8,7 @@ import { ListComponent } from './pages/list/list.component'
 import { DetailComponent } from './pages/detail/detail.component'
 import { CardComponent } from './pages/list/card/card.component'
 import { RouterModule } from '@angular/router'
+import { StoreModule } from '@ngrx/store'
 
 @NgModule({
   declarations: [

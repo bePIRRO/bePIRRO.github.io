@@ -1,4 +1,4 @@
-import { Component, OnDestroy, Output, EventEmitter } from '@angular/core'
+import { Component, OnDestroy } from '@angular/core'
 import { DomSanitizer } from '@angular/platform-browser'
 import { ActivatedRoute, Router } from '@angular/router'
 import { Subject } from 'rxjs'
@@ -9,7 +9,6 @@ import { AppService } from 'src/app/app.service'
   styleUrls: [],
 })
 export class DetailComponent implements OnDestroy {
-  @Output() emitDescription: EventEmitter<string> = new EventEmitter<string>()
   site: any
   onDestroy$ = new Subject<void>()
 
@@ -37,7 +36,6 @@ export class DetailComponent implements OnDestroy {
       url: this.sanitizer.bypassSecurityTrustResourceUrl(x.url),
       img: x.img,
     }
-    this.emitDescription.emit(this.site.description)
   }
 
   ngOnDestroy(): void {
