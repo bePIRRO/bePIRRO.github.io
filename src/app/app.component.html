@@ -1,4 +1,7 @@
-<section>
+<section id="app-portfolio">
   <app-header></app-header>
-  <router-outlet></router-outlet>
+  <router-outlet (emitDescription)="getDescription($event)"></router-outlet>
+  <footer>
+    <p>{{ description }}</p>
+  </footer>
 </section>

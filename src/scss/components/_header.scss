@@ -8,6 +8,10 @@
   ul {
     margin: 0;
     align-self: center;
+    &.dropdown-menu {
+      border-radius: 0;
+      background-color: $jet;
+    }
     li {
       margin: 0;
       list-style-type: none;
@@ -18,6 +22,25 @@
         color: $white-smoke;
         border-radius: 0;
         border-color: $jet;
+      }
+      &.dropdown-item {
+        color: $white-smoke;
+        &:hover {
+          filter: brightness(40%);
+          .nav-link {
+            color: $jet;
+          }
+        }
+        &:active {
+          background-color: $jet;
+          filter: brightness(40%);
+        }
+      }
+      .nav-link {
+        color: $white-smoke;
+        &:hover {
+          color: $jet;
+        }
       }
     }
   }

@@ -4,8 +4,9 @@
   box-sizing: border-box;
 }
 
-body {
+#app-portfolio {
   background-color: $jet;
+  min-height: 100vh;
 }
 
 .container {
@@ -14,4 +15,12 @@ body {
 
 .pointer:hover {
   cursor: pointer;
+}
+
+footer {
+  height: 30px;
+  color: $white-smoke;
+  background-color: $jet;
+  text-align: center;
+  text-transform: capitalize;
 }

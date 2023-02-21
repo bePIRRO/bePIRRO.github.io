@@ -1,14 +1,15 @@
-import { Component, OnDestroy, OnInit } from '@angular/core'
+import { Component, OnDestroy, Output, EventEmitter } from '@angular/core'
 import { DomSanitizer } from '@angular/platform-browser'
 import { ActivatedRoute, Router } from '@angular/router'
-import { pipe, Subject, takeUntil } from 'rxjs'
+import { Subject } from 'rxjs'
 import { AppService } from 'src/app/app.service'
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: [],
 })
-export class DetailComponent implements OnInit, OnDestroy {
+export class DetailComponent implements OnDestroy {
+  @Output() emitDescription: EventEmitter<string> = new EventEmitter<string>()
   site: any
   onDestroy$ = new Subject<void>()
 
@@ -17,23 +18,17 @@ export class DetailComponent implements OnInit, OnDestroy {
     private readonly router: Router,
     private readonly appService: AppService,
     private readonly sanitizer: DomSanitizer
-  ) {}
-
-  ngOnInit(): void {
-    this.getSite()
-    this.router.events.pipe(takeUntil(this.onDestroy$)).subscribe((res) => {
-      console.log(res)
-      this.getSite()
+  ) {
+    this.router.events.subscribe((res) => {
+      if (res)
+        this.route.paramMap.subscribe((p) => {
+          const id = p.get('id')
+          this.getSite(id ?? '')
+        })
     })
-    this.router.setUpLocationChangeListener()
   }
 
-  getId(): void {
-    this.route.snapshot.paramMap.get('id')
-  }
-
-  getSite(): void {
-    const slug = this.getId()
+  getSite(slug: string): void {
     const x = this.appService.sitesList.find((s) => s.title === slug)
     this.site = {
       id: x.id,
@@ -42,7 +37,7 @@ export class DetailComponent implements OnInit, OnDestroy {
       url: this.sanitizer.bypassSecurityTrustResourceUrl(x.url),
       img: x.img,
     }
-    console.log(slug, this.site)
+    this.emitDescription.emit(this.site.description)
   }
 
   ngOnDestroy(): void {
