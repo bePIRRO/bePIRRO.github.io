@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app-portfolio {
+  background-color: $jet;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1500px;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+footer {
+  height: 30px;
+  color: $white-smoke;
+  background-color: $jet;
+  text-align: center;
+  text-transform: capitalize;
+}

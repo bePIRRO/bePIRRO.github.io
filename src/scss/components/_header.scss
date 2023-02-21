@@ -1,0 +1,47 @@
+.main-nav {
+  background-color: $black;
+  color: $white-smoke;
+  height: 50px;
+  .main-ul {
+    height: 100%;
+  }
+  ul {
+    margin: 0;
+    align-self: center;
+    &.dropdown-menu {
+      border-radius: 0;
+      background-color: $jet;
+    }
+    li {
+      margin: 0;
+      list-style-type: none;
+      display: inline-block;
+      height: 100%;
+      button {
+        height: 100%;
+        color: $white-smoke;
+        border-radius: 0;
+        border-color: $jet;
+      }
+      &.dropdown-item {
+        color: $white-smoke;
+        &:hover {
+          filter: brightness(40%);
+          .nav-link {
+            color: $jet;
+          }
+        }
+        &:active {
+          background-color: $jet;
+          filter: brightness(40%);
+        }
+      }
+      .nav-link {
+        color: $white-smoke;
+        &:hover {
+          color: $jet;
+        }
+      }
+    }
+  }
+}
