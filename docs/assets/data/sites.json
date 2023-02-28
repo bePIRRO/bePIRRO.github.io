@@ -56,6 +56,13 @@
           "description": "It's one of my first projects. First time with bootstrap css library",
           "url": "https://bepirro.github.io/html-css-bootstrap-freelancer/",
           "img": "start_bootstrap.PNG"
+        },
+        {
+          "id": 8,
+          "title": "iAcademy",
+          "description": "An example of landing page. Copy of iAcademy",
+          "url": "https://bepirro.github.io/proj-html-vuejs/",
+          "img": "iAcademy.PNG"
         }
       ]
     }
